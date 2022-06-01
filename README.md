@@ -1,0 +1,1 @@
+# saleor-social-login-plugin
