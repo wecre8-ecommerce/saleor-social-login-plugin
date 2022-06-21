@@ -1,17 +1,12 @@
 import graphene
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-
+from oauth2.graphql import types
+from oauth2.providers import Provider
+from oauth2.utils import (PluginOAuthProvider, get_or_create_user,
+                          get_user_data, get_user_tokens)
 from saleor.core.utils.url import validate_storefront_url
 from saleor.graphql.core.mutations import BaseMutation
-from oauth2.providers import Provider
-from oauth2.utils import (
-    PluginOAuthProvider,
-    get_or_create_user,
-    get_user_data,
-    get_user_tokens,
-)
-from oauth2.graphql import types
 
 User = get_user_model()
 

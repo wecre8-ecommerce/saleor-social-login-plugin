@@ -1,7 +1,6 @@
 import graphene
-
-from saleor.graphql.core.types import Error
 from oauth2.graphql import enums
+from saleor.graphql.core.types import Error
 
 OAuth2ErrorCode = graphene.Enum.from_enum(enums.OAuth2ErrorCode)
 

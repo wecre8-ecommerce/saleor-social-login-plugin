@@ -1,14 +1,13 @@
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ValidationError
 from django.middleware.csrf import _get_new_csrf_token
-
+from oauth2.consts import providers_config_map
+from oauth2.graphql import enums
+from oauth2.providers import Provider
 from saleor.account import events as account_events
 from saleor.account import search
 from saleor.core.jwt import create_access_token, create_refresh_token
 from saleor.plugins.base_plugin import BasePlugin
-from oauth2.consts import providers_config_map
-from oauth2.graphql import enums
-from oauth2.providers import Provider
 
 User = get_user_model()
 

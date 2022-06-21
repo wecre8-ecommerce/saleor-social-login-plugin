@@ -1,14 +1,13 @@
 import json
 
 from django.shortcuts import redirect
-
+from oauth2.graphql.schema import schema
+from oauth2.utils import (PluginOAuthProvider, normalize_config,
+                          parse_providers_str)
 from saleor.account.models import User
-
 from saleor.graphql.views import GraphQLView
 from saleor.plugins.base_plugin import BasePlugin, ConfigurationTypeField
 from saleor.plugins.models import PluginConfiguration
-from oauth2.graphql.schema import schema
-from oauth2.utils import PluginOAuthProvider, normalize_config, parse_providers_str
 
 
 class OAuth2Plugin(BasePlugin):
